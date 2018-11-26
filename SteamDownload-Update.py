@@ -62,26 +62,7 @@ EXCLUDEDLINKS = [
 #        "ModName": "ModId"
 MODS = {
         "@cba_a3":                      "450814997",
-        "@cup_terrains_core":           "583496184",
-        "@cup_terrains_maps":           "583544987",
-        "@cup_weapons":                 "497660133",
-        "@cup_units":                   "497661914",
-        "@cup_vehicles":                "541888371",
-        "@advanced_urban_rappelling":   "730310357",
-        "@advanced_rappelling":         "713709341",
-        "@advanced_towing":             "639837898",
-        "@enhanced_movement":           "333310405",
-        "@extended_base_mod":           "647753401",
-        "@rhssaf":                      "843632231",
-        "@rhsusaf":                     "843577117",
-        "@rhsafrf":                     "843425103",
-        "@rhsgref":                     "843593391",
-        "@slz":                         "647452409",
-        "@ares":                        "421908020",
-        "@chernarusredux":              "1128256978",
-        "@exile":                       "1487484880",
-        "@rayanzombies":                "501966277",
-        "@zombiesinfection":            "614815221"
+        "@cup_terrains_core":           "583496184"
 }
 
 #Manual mod path
@@ -118,9 +99,9 @@ from lxml import html
 SYSTEM = platform.system()
 
 if SYSTEM != 'Linux':
-    STEAM_CMD = os.path.join(STEAM_PATH, "{}steamcmd.exe")
+    STEAM_CMD = os.path.join(STEAM_PATH, "steamcmd.exe")
 else:
-    STEAM_CMD = os.path.join(STEAM_PATH, "{}steamcmd.sh")
+    STEAM_CMD = os.path.join(STEAM_PATH, "steamcmd.sh")
 WORKSHOP_DIR = os.path.join(os.path.join(STEAM_PATH, "steamapps"), "workshop")
 GAME_WORKSHOP_MODS_DIR = os.path.join(os.path.join(WORKSHOP_DIR, "content"), WORKSHOP_GAME_ID)
 GAME_MODS_DIR = os.path.join(SERVER_DIR, ADDONSDIR)
