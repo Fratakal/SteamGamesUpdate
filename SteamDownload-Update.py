@@ -200,7 +200,7 @@ def update_mods():
         if not STEAM_USER or not STEAM_PASS:
             steam_cmd_params  = " +login anonymous"
         else:
-            steam_cmd_params  = " +login {} {}".format(STEAM_USER, STEAM_PASS)
+            steam_cmd_params  = " +login '{}' '{}'".format(STEAM_USER, STEAM_PASS)
         steam_cmd_params += " +workshop_download_item {} {} validate +workshop_status {}".format(
             WORKSHOP_GAME_ID,
             SMALLEST_WORKSHOP_ITEM_ID,
