@@ -147,7 +147,7 @@ def update_server():
     if not STEAM_USER or not STEAM_PASS:
         steam_cmd_params = " +login anonymous"
     else:
-        steam_cmd_params = " +login {} {}".format(STEAM_USER, STEAM_PASS)
+        steam_cmd_params = " +login '{}' '{}'".format(STEAM_USER, STEAM_PASS)
     # steam_cmd_params += " +force_install_dir {}".format(SERVER_DIR)
     steam_cmd_params += " +app_update {} validate".format(GAME_SERVER_ID)
     steam_cmd_params += " +quit"
