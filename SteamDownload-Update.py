@@ -211,7 +211,7 @@ def update_mods():
         call_steamcmd(steam_cmd_params)
 
     for mod_name, mod_id in MODS.items():
-        path = "{}\{}".format(GAME_WORKSHOP_MODS_DIR, mod_id)
+        path = os.path.join(GAME_WORKSHOP_MODS_DIR, mod_id)
         # Check if mod needs to be updated
         if os.path.isdir(path):
             if FORCEMODUPDATE:
@@ -294,7 +294,7 @@ def create_symlinks_from_game_dir():
                 if not os.path.exists(target):
                     shutil.copytree(source, target)
             else:
-                if not os.path.exists(target):
+                if not os.path.exists(target) and not os.path.isfile(target) and not os.path.islink(target):
                     os.symlink(source, target)
 
 def copy_files():
