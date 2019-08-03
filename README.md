@@ -23,6 +23,9 @@ Dependencies :
 
 ============================================================
 
+Warning : You should disable TwoFactor Auth if need to get logged or the script will pause for code.
+
+============================================================
 
 
 Usage: 
