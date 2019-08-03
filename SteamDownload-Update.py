@@ -317,6 +317,9 @@ def start_message():
         input("Press Enter to continue... or Ctrl+C to quit")
     if FORCEMODUPDATE:
         printMsg("Force mods update is set on {}".format(FORCEMODUPDATE))
+    if not os.path.exists(SERVER_DIR):
+        log("Directory does not exist, Creating : ({})".format(SERVER_DIR))
+        os.mkdir(SERVER_DIR)
 #endregion
 
 start_message()
