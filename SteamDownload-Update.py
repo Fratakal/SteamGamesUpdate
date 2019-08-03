@@ -97,6 +97,7 @@ from collections import OrderedDict
 from lxml import html
 
 SYSTEM = platform.system()
+STEAM_PATH = os.path.abspath(STEAM_PATH)
 
 if SYSTEM != 'Linux':
     STEAM_CMD = os.path.join(STEAM_PATH, "steamcmd.exe")
@@ -273,7 +274,7 @@ def create_mod_symlinks():
         if os.path.isdir(real_path):
             if not os.path.islink(link_path):
                 os.symlink(real_path, link_path)
-                log("Creating symlink '{}'...".format(link_path))
+                printMsg("Creating symlink '{}'...".format(link_path))
         else:
             if ForceLogDisplay:
                 printMsg("Mod '{}' does not exist! ({})".format(mod_name, real_path))
