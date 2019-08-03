@@ -12,8 +12,11 @@ Windows and Unix ready
 Dependencies :
 
   pip3
+  
   python-protobuf
+  
   python3-lxml
+  
   steamfiles (https://pypi.org/project/steamfiles/) [use pip3 to install]
   
 
