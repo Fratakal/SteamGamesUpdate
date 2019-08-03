@@ -262,6 +262,10 @@ def lowercase_workshop_dir():
 def create_mod_symlinks():
     log("Creating symlinks...")
 
+    if not os.path.exists(GAME_MODS_DIR):
+        log("Directory does not exist, Creating : ({})".format(GAME_MODS_DIR))
+        os.mkdir(GAME_MODS_DIR)
+
     for mod_name, mod_id in MODS.items():
         link_path = os.path.join(GAME_MODS_DIR, mod_name)
         real_path = os.path.join(GAME_WORKSHOP_MODS_DIR, mod_id)
